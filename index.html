@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Memory Card Game</title>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: sans-serif; text-align: center; background: #f0f4f8; padding: 20px; }
+
+    #hud { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; font-size: 20px; }
+
+    #grid {
+      display: grid;
+      grid-template-columns: repeat(4, 90px);
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      width: 90px; height: 90px;
+      font-size: 36px;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+      background: #dce8f5;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .card.flipped  { background: white; }
+    .card.matched  { background: #d4edda; border-color: #28a745; opacity: 0.7; }
+
+    button { padding: 10px 24px; font-size: 16px; border-radius: 8px;
+             border: none; background: #3b82f6; color: white; cursor: pointer; }
+
+    #message { font-size: 22px; color: #16a34a; margin: 12px 0; min-height: 30px; }
+  </style>
+</head>
+<body>
+
+  <h1>Memory Card Game</h1>
+
+  <div id="hud">
+    <span>Moves: <strong id="moves">0</strong></span>
+    <span>Pairs: <strong id="pairs">0</strong> / 8</span>
+  </div>
+
+  <div id="message"></div>
+  <div id="grid"></div>
+  <button onclick="startGame()">New Game</button>
+
+  <script src="Logic-Sol-Class.js">
+    
+  </script>
+</body>
+</html>
