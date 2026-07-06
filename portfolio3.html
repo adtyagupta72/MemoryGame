@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <style>
+    /* ── STEP 1: Page basics ─────────────────────────────── */
+    body {
+      font-family: 'Comic Sans MS', 'Segoe UI', sans-serif;
+      background-color: #FDF2F8;      /* soft pink background */
+      margin: 0;
+      padding: 0;
+      color: #3B0764;
+    }
+
+    /* ── STEP 2: Two-column layout with FLEXBOX ──────────── */
+    .page {
+      display: flex;                  /* sidebar + main side by side */
+      flex-wrap: wrap;                /* stacks on small screens */
+      min-height: 100vh;
+    }
+
+    /* ── STEP 3: The sidebar (left column) ───────────────── */
+    .sidebar {
+      background-color: #A855F7;      /* bright purple */
+      color: white;
+      width: 260px;
+      padding: 40px 25px;
+      text-align: center;
+    }
+
+    /* Your profile photo — a perfect circle! */
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;             /* 50% turns a square into a circle */
+      object-fit: cover;              /* photo fills the circle without stretching */
+      border: 5px solid white;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    /* BACKUP OPTION: emoji as profile picture (if you have no photo) */
+    .sidebar .photo {
+      font-size: 70px;
+      background: white;
+      width: 120px;
+      height: 120px;
+      line-height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+    }
+
+    .sidebar h1 { font-size: 26px; margin: 10px 0; }
+    .sidebar p  { font-size: 15px; color: #F3E8FF; }
+
+    .sidebar .fact {
+      background-color: #9333EA;
+      border-radius: 12px;
+      padding: 12px;
+      margin: 12px 0;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    /* ── STEP 4: The main content (right column) ─────────── */
+    .main {
+      flex: 1;                        /* takes up all remaining space */
+      padding: 40px;
+      min-width: 300px;
+    }
+
+    .main h2 {
+      color: #9333EA;
+      font-size: 26px;
+      margin-top: 30px;
+    }
+
+    .main h2:first-child { margin-top: 0; }
+
+    .main p, .main li {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #4C1D95;
+    }
+
+    /* ── STEP 5: Fun highlight boxes ─────────────────────── */
+    .highlight {
+      background-color: #FBCFE8;      /* pink highlight box */
+      border-left: 6px solid #EC4899;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin: 15px 0;
+    }
+
+    /* ── STEP 6: Project boxes ───────────────────────────── */
+    .project {
+      background-color: white;
+      border: 2px solid #E9D5FF;
+      border-radius: 12px;
+      padding: 18px;
+      margin: 12px 0;
+    }
+
+    .project h3 { margin: 0 0 6px; color: #7C3AED; }
+    .project p  { margin: 0; font-size: 15px; }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- ═══ LEFT SIDEBAR: Photo + quick facts ═══ -->
+    <div class="sidebar">
+      <!-- 📸 PROFILE PHOTO:
+           1. Put your photo in the SAME folder as this file
+           2. Name it exactly: my-photo.jpg -->
+      <img class="profile-pic" src="my-photo.jpg" alt="Photo of [Your Name]" />
+
+      <!-- NO PHOTO? Delete the img line above and use this instead:
+      <div class="photo">🧑‍💻</div>   (pick your favourite emoji!)  -->
+
+      <h1>[Your Name]</h1>
+      <p>Future Coder & Creator</p>
+
+      <div class="fact">🏫 School: [Your School]</div>
+      <div class="fact">📍 City: [Your City]</div>
+      <div class="fact">🎂 Age: [Your Age]</div>
+      <div class="fact">⭐ Fav Subject: [Subject]</div>
+      <div class="fact">🍕 Fav Food: [Food]</div>
+    </div>
+
+    <!-- ═══ RIGHT SIDE: Main content ═══ -->
+    <div class="main">
+
+      <h2>👋 Welcome to My World!</h2>
+      <p>
+        Hi! I'm [Your Name] and this is my very own website that
+        I built with HTML and CSS. Look around and get to know me!
+      </p>
+
+      <div class="highlight">
+        💡 Fun fact: I built this entire page myself in one class!
+      </div>
+
+      <h2>🎯 Things I'm Good At</h2>
+      <ul>
+        <li>Making games in Scratch and JavaScript</li>
+        <li>[Something you're good at]</li>
+        <li>[Another thing you're good at]</li>
+      </ul>
+
+      <h2>💻 My Projects</h2>
+
+      <div class="project">
+        <h3>🏎 Car Racing Game</h3>
+        <p>A racing game I made in Scratch with levels and scoring.</p>
+      </div>
+
+      <div class="project">
+        <h3>🃏 Memory Card Game</h3>
+        <p>A JavaScript game where you flip cards to match emoji pairs.</p>
+      </div>
+
+      <div class="project">
+        <h3>🌐 This Website</h3>
+        <p>My first ever website — made with HTML and CSS!</p>
+      </div>
+
+      <h2>🚀 My Big Dream</h2>
+      <p>
+        One day I want to [your dream]. I'm learning to code now
+        so I can build amazing things in the future!
+      </p>
+
+    </div>
+  </div>
+
+</body>
+</html>

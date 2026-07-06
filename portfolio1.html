@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <style>
+    /* ── STEP 1: Page basics ─────────────────────────────── */
+    body {
+      font-family: 'Trebuchet MS', sans-serif;
+      background-color: #FFF8E7;      /* light cream - try changing this! */
+      color: #333333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ── STEP 2: The big header banner ───────────────────── */
+    header {
+      background-color: #FFB830;      /* sunny yellow */
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    /* Your profile photo — a perfect circle! */
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;             /* 50% turns a square into a circle */
+      object-fit: cover;              /* photo fills the circle without stretching */
+      border: 6px solid white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin: 0;
+      color: #4A3200;
+    }
+
+    header p {
+      font-size: 20px;
+      color: #6B4E00;
+      margin-top: 8px;
+    }
+
+    /* ── STEP 3: Each section of the page ────────────────── */
+    section {
+      max-width: 700px;
+      margin: 30px auto;              /* centres the section */
+      padding: 25px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      color: #E8871E;                 /* orange headings */
+      border-bottom: 3px solid #FFB830;
+      padding-bottom: 8px;
+    }
+
+    /* ── STEP 4: The hobby list ──────────────────────────── */
+    ul {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* ── STEP 5: The footer ──────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #4A3200;
+      color: #FFB830;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ HEADER: Your name and tagline ═══ -->
+  <header>
+    <!-- 📸 PROFILE PHOTO:
+         1. Put your photo in the SAME folder as this file
+         2. Name it exactly: my-photo.jpg
+         (or change the name below to match your photo's name) -->
+    <img class="profile-pic" src="my-photo.jpg" alt="Photo of [Your Name]" />
+
+    <h1>Hi, I'm [Your Name]! 👋</h1>
+    <p>Student · Coder · Dreamer</p>
+  </header>
+
+  <!-- ═══ SECTION 1: About Me ═══ -->
+  <section>
+    <h2>😀 About Me</h2>
+    <p>
+      Hello! I am [Your Name] and I am [age] years old.
+      I study in class [X] at [Your School Name].
+      I love learning new things, especially [your favourite subject]!
+    </p>
+  </section>
+
+  <!-- ═══ SECTION 2: My Hobbies ═══ -->
+  <section>
+    <h2>🎨 My Hobbies</h2>
+    <ul>
+      <li>🎮 Playing and making video games</li>
+      <li>📚 Reading adventure books</li>
+      <li>🏏 Playing cricket with my friends</li>
+      <li>🎵 Listening to music</li>
+    </ul>
+  </section>
+
+  <!-- ═══ SECTION 3: Things I Have Made ═══ -->
+  <section>
+    <h2>💻 Things I Have Made</h2>
+    <ul>
+      <li><strong>Scratch Game:</strong> A car racing game with 3 levels</li>
+      <li><strong>JavaScript Game:</strong> A memory card flip game</li>
+      <li><strong>This Website:</strong> You are looking at it right now! 😄</li>
+    </ul>
+  </section>
+
+  <!-- ═══ SECTION 4: My Dream ═══ -->
+  <section>
+    <h2>🚀 My Dream</h2>
+    <p>
+      When I grow up, I want to be a [your dream job]
+      because [your reason]!
+    </p>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    Made with ❤️ by [Your Name] · Summer Camp 2025
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <style>
+    /* ── STEP 1: Page basics ─────────────────────────────── */
+    body {
+      font-family: Verdana, sans-serif;
+      background-color: #0B2447;      /* deep ocean blue */
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ── STEP 2: Profile area with a circle avatar ───────── */
+    .profile {
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+
+    /* Your profile photo — a perfect circle! */
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;             /* 50% makes a perfect circle! */
+      object-fit: cover;              /* photo fills the circle without stretching */
+      border: 5px solid #19A7CE;
+      display: block;
+      margin: 0 auto 15px;
+    }
+
+    /* BACKUP OPTION: circle with your initial (if you have no photo) */
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background-color: #19A7CE;
+      color: white;
+      font-size: 48px;
+      font-weight: bold;
+      line-height: 110px;             /* centres the letter vertically */
+      margin: 0 auto 15px;
+    }
+
+    .profile h1 { margin: 5px 0; font-size: 36px; }
+    .profile p  { color: #9BC4E2; font-size: 18px; margin: 5px 0; }
+
+    /* ── STEP 3: Cards side by side using FLEXBOX ────────── */
+    .card-row {
+      display: flex;                  /* magic! puts cards in a row */
+      flex-wrap: wrap;                /* wraps to next line on small screens */
+      justify-content: center;
+      gap: 20px;                      /* space between cards */
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #19376D;
+      border-radius: 16px;
+      padding: 25px;
+      width: 250px;
+      text-align: center;
+    }
+
+    .card:hover {
+      background-color: #576CBC;      /* changes colour on mouse hover! */
+    }
+
+    .card .big-emoji { font-size: 44px; }
+    .card h2 { color: #A5D7E8; font-size: 20px; margin: 12px 0; }
+    .card p  { color: #D9EAF5; font-size: 15px; line-height: 1.6; }
+
+    /* ── STEP 4: Skill badges ────────────────────────────── */
+    .badges {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #19A7CE;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 20px;            /* pill shape */
+      margin: 5px;
+      font-size: 15px;
+    }
+
+    /* ── STEP 5: Footer ──────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #9BC4E2;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ PROFILE: Photo + name ═══ -->
+  <div class="profile">
+    <!-- 📸 PROFILE PHOTO:
+         1. Put your photo in the SAME folder as this file
+         2. Name it exactly: my-photo.jpg -->
+    <img class="profile-pic" src="my-photo.jpg" alt="Photo of [Your Name]" />
+
+    <!-- NO PHOTO? Delete the img line above and use this instead:
+    <div class="avatar">A</div>   (change A to YOUR first initial!)  -->
+
+    <h1>[Your Name]</h1>
+    <p>Class [X] · [Your School] · [Your City]</p>
+  </div>
+
+  <!-- ═══ SKILL BADGES ═══ -->
+  <div class="badges">
+    <span class="badge">Scratch</span>
+    <span class="badge">JavaScript</span>
+    <span class="badge">HTML & CSS</span>
+    <span class="badge">AI Tools</span>
+  </div>
+
+  <!-- ═══ CARDS: About, Hobbies, Projects ═══ -->
+  <div class="card-row">
+
+    <div class="card">
+      <div class="big-emoji">😀</div>
+      <h2>About Me</h2>
+      <p>I am [age] years old and I love [favourite thing].
+         My favourite subject is [subject]!</p>
+    </div>
+
+    <div class="card">
+      <div class="big-emoji">🎮</div>
+      <h2>My Hobbies</h2>
+      <p>Gaming, cricket, drawing, and building cool things
+         with code!</p>
+    </div>
+
+    <div class="card">
+      <div class="big-emoji">💻</div>
+      <h2>My Projects</h2>
+      <p>A Scratch racing game, a JavaScript memory game,
+         and this very website!</p>
+    </div>
+
+    <div class="card">
+      <div class="big-emoji">🚀</div>
+      <h2>My Dream</h2>
+      <p>I want to become a [dream job] and
+         [something cool you want to do]!</p>
+    </div>
+
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    Made with 💙 by [Your Name] · Summer Camp 2025
+  </footer>
+
+</body>
+</html>

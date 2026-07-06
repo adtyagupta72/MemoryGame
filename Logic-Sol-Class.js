@@ -1,6 +1,6 @@
 var emojis = ["🐶","🐱","🦊","🐸","🦁","🐧","🦋","🦄"]
 
-var gird = document.getElementById("grid")
+var grid = document.getElementById("grid")
 
 grid.innerHTML = ""
 
