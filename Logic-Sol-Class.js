@@ -1,9 +1,31 @@
 var emojis = ["🐶","🐱","🦊","🐸","🦁","🐧","🦋","🦄"]
 
+var deck = []
+var index = 0
+while(index < emojis.length)
+{
+  deck.push(emojis[index])
+  deck.push(emojis[index])
+  index += 1
+}
+console.log(deck)
+shuffle(deck) 
+console.log(deck) 
+
 var grid = document.getElementById("grid")
 
 grid.innerHTML = ""
 
+var tempIndex = 0 
+while(tempIndex < deck.length) 
+{
+  var cardElement = document.createElement("div")
+  cardElement.className = "card"
+  cardElement.dataset.emoji = deck[tempIndex]
+  cardElement.addEventListener("click", onCardClick)
+  grid.appendChild(cardElement)
+  tempIndex += 1
+}
 /*
 Card = {
   className: For css properties / Designing,
@@ -18,35 +40,18 @@ Card = {
 }
 */
 
-var deck = []
+
 var flipped = []
 var locked = false
-var index = 0
+
 matched = 0
 moves = 0
 
 document.getElementById("moves").textContent = moves
 document.getElementById("pairs").textContent = matched
-while(index < emojis.length)
-{
-  deck.push(emojis[index])
-  deck.push(emojis[index])
-  index += 1
-}
-console.log(deck)
-shuffle(deck) 
-console.log(deck) 
 
-var tempIndex = 0 
-while(tempIndex < deck.length) 
-{
-  var cardElement = document.createElement("div")
-  cardElement.className = "card"
-  cardElement.dataset.emoji = deck[tempIndex]
-  cardElement.addEventListener("click", onCardClick)
-  grid.appendChild(cardElement)
-  tempIndex += 1
-}
+
+
 
 
 function onCardClick(e)
